@@ -157,29 +157,29 @@ public class Lab3 {
 		}  // end for creation of name/ssn unique identifier
 		
 		
-		/**
-	 		
-	 		output of investor investment, rate & term tuples (optional)
-	 		
-		*/
-		
-		for (int row = 0; row < investor; row++) {
-			
-			System.out.print("[");
-			
-			for (int col = 0; col < 3; col++) {
-				if (col < 2) {
-					System.out.print(investRateYearsArr[row][col] + ", ");
-				}  //  end if
-				else {
-					System.out.print(investRateYearsArr[row][col]);
-				}  //  end else
-			} //  end for
-			
-			System.out.println("]");
-			System.out.println();
-			
-		}  //  end for investor investment, rate & term tuples
+//		/**
+//	 		
+//	 		output of investor investment, rate & term tuples (optional)
+//	 		
+//		*/
+//		
+//		for (int row = 0; row < investor; row++) {
+//			
+//			System.out.print("[");
+//			
+//			for (int col = 0; col < 3; col++) {
+//				if (col < 2) {
+//					System.out.print(investRateYearsArr[row][col] + ", ");
+//				}  //  end if
+//				else {
+//					System.out.print(investRateYearsArr[row][col]);
+//				}  //  end else
+//			} //  end for
+//			
+//			System.out.println("]");
+//			System.out.println();
+//			
+//		}  //  end for investor investment, rate & term tuples
 		
 		
 		/**
