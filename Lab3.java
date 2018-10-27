@@ -67,9 +67,16 @@ public class Lab3 {
 		
 		do
 		{
-			// last name of investor
-			System.out.print("Last Name: ");
-			lastNameArr[investor] = s.nextLine();
+			// do-while last name of investor
+			do
+			{
+				System.out.print("Last Name: ");
+				lastNameArr[investor] = s.nextLine();
+				
+				if (lastNameArr[investor].length() < 4) {
+					System.out.println("Please enter a name with at least 4 characters.");
+				}  //  end if
+			} while (lastNameArr[investor].length() < 4);  //  end do-while when name valid
 			
 			// ssn of investor
 			System.out.print("SSN (###-##-####): ");
@@ -77,7 +84,6 @@ public class Lab3 {
 			
 			// investment parameters: amount, rate, time
 			for (int irt = 0; irt < NUM_PARAMETERS; irt++) {
-				
 				// enter investment amount between 100-10,000, inclusive
 				if (irt == 0) {
 					//  do-while assign investment amount & request to re-enter if invalid amount
@@ -121,9 +127,7 @@ public class Lab3 {
 						}  //  end if
 					} while (investRateYearsArr[investor][irt] < 1 || investRateYearsArr[investor][irt] > 10);
 						//  end do-while assign term length & request to re-enter if invalid length
-					
 				}  // end else if term in years between 1-10, inclusive
-				
 			}  //  end for investment parameters: amount, rate, time
 			
 			// prompt to enter another investor
@@ -136,12 +140,11 @@ public class Lab3 {
 		} while (investor < NUM_CUSTOMERS && anotherInvestor != 'N');  //  end do-while enter investor info
 		System.out.println();
 		
-		
 		/**
 		
 		 	creation of name/ssn unique identifier
 		 	
-		 */
+		*/
 		
 		String [] modNameArr = new String[investor];
 		
@@ -158,7 +161,7 @@ public class Lab3 {
 //	 		
 //	 		output of investor investment, rate & term tuples (optional)
 //	 		
-//		 */
+//		*/
 //		
 //		for (int row = 0; row < investor; row++) {
 //			
@@ -181,7 +184,7 @@ public class Lab3 {
 		
 		/**
 			calculation of interest
-		 */
+		*/
 		
 		double [] compoundValArr = new double[investor];
 		double [] interestArr = new double[investor];
@@ -196,7 +199,7 @@ public class Lab3 {
 		
 		/**
 			output
-		 */
+		*/
 	
 		for (int i = 0; i < investor; i++) {
 			System.out.printf("%s\tCompound Value: $%-,10.2f\tInterest: $%-,10.2f\n", 
